@@ -5,9 +5,7 @@ library(dplyr)
 library(stringr)
 library(viridis)      
 
-setwd('/home/sofia/Rladies/datos_encuesta/')
 Datos = read.csv("seleccion.csv")
-#Datos = readxl::read_excel("Datos_base.xlsx")
 
 questions = names(Datos)
 df = Datos[c(3,4,5,7,8)]

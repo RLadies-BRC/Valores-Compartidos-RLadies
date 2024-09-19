@@ -6,7 +6,6 @@ library(magick)
 library(dplyr)
 library(stringr)
 
-setwd('/home/sofia/Rladies/datos_encuesta/')
 Datos = readxl::read_excel("Datos_base.xlsx")
 
 questions = names(Datos)

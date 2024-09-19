@@ -4,8 +4,6 @@ library(dplyr)
 library(stringr)
 library(png)
 
-setwd('/home/sofia/Rladies/datos_encuesta/')
-
 Datos = readxl::read_excel("Datos_base.xlsx")
 Datos_texto = read.csv("resp_textos.csv")
 
@@ -89,15 +87,6 @@ join_plots = ggpubr::ggarrange(q_lid1,q_lid2, ncol = 2,
 
 ggsave("subfigura3b.pdf", join_plots, width = 10, height = 7)
 
-
-# gridExtra::grid.arrange(
-#   table_grob, join_plots,
-#   ncol = 2, nrow = 5,
-#   layout_matrix = rbind(c(1,1,1,1),
-#                         c(1,1,1,1),
-#                         c(1,1,1,1),
-#                         c(2,2,2,2))  
-# )
 
 
 
